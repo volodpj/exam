@@ -1,0 +1,23 @@
+{
+  "name": "html-exam1",
+  "version": "1.0.0",
+  "description": "HTML and CSS exam materials",
+  "main": "index.html",
+  "scripts": {
+    "validate:html": "foreach -g ./*.html --no-c -x \"html-validator --file #{path} --format=gnu --verbose\"",
+    "lint:html": "htmllint ./*.html",
+    "lint:css": "stylelint ./*.css",
+    "start": "browser-sync start --config browser-sync.config.js",
+    "test": "npm run lint:html && npm run lint:css && npm run validate:html",
+    "test:lighthouse": "lighthouse --view  --verbose"
+  },
+  "devDependencies": {
+    "@mate-academy/stylelint-config": "0.0.6",
+    "browser-sync": "^2.26.5",
+    "foreach-cli": "^1.8.1",
+    "html-validator-cli": "^6.0.1",
+    "htmllint-cli": "0.0.7",
+    "lighthouse": "^5.0.0",
+    "stylelint": "^10.0.1"
+  }
+}

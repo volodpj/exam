@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.people{
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+}
+
+.person{
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+.person__img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: border-radius 1s;
+}
+
+.person__name{
+  font-family: Arial;
+  font-size: 20px;
+  line-height: 23px;
+  color: #2F4F4F;
+  text-align: center;
+}
+
+.person__extra{
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  visibility: hidden;
+  transition: 1s;
+
+}
+.person__pay::before{
+  content: '$'
+}
+
+.person:hover{
+  background: #EEEEEE;
+  border-radius: 10px;
+
+}
+
+.person:hover .person__details .person__extra{
+  visibility: visible;
+}
+
+.person:hover .person__img{
+  border-radius: 60px;
+}
