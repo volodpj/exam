@@ -31,3 +31,7 @@ $ npm i
 `start` - запуск локального сервера для розробки
 
 `test:lighthouse` - запуск перевірки проекта на локальному сервері за допомогою `lighthouse`
+
+
+# uber_eats
+ - [Preview](https://volodpj.github.io/exam/)
